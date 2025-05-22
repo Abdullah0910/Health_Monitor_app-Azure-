@@ -24,4 +24,16 @@ docker run -p 5000:5000 health-monitor
 
 5. az webapp config container set --name <your-app-name> --resource-group health-monitor-rg --docker-custom-image-name <abdullah0904>/health-monitor
 
+
+
+                                                          Prometheus Configuration
+Prometheus can scrape the metrics at /metrics to monitor request counts
+   global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'health-monitor-app'
+    static_configs:
+      - targets: ['localhost:5000']  # Or your cloud URL/IP
+
 ----------------------------------------------Thanks-----------------------------------------
