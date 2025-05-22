@@ -35,5 +35,9 @@ scrape_configs:
   - job_name: 'health-monitor-app'
     static_configs:
       - targets: ['localhost:5000']  # Or your cloud URL/IP
+   
+    
+      - <img width="959" alt="image" src="https://github.com/user-attachments/assets/9972ade9-837e-49f2-884b-2d1f439cd8ba" />
+
 
 ----------------------------------------------Thanks-----------------------------------------
