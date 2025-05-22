@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Distributed App Health Monitor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            padding: 2rem;
+            color: #333;
+        }
+        h1 {
+            color: #0078D7;
+        }
+        .service {
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 0 6px rgba(0,0,0,0.1);
+        }
+        .Healthy {
+            color: green;
+            font-weight: bold;
+        }
+        .Degraded {
+            color: orange;
+            font-weight: bold;
+        }
+        .Down {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Service Status Dashboard</h1>
+    {% for name, status in services.items() %}
+        <div class="service">
+            <strong>{{ name }}:</strong>
+            <span class="{{ status }}">{{ status }}</span>
+        </div>
+    {% endfor %}
+    <p>Metrics: <a href="/metrics" target="_blank">/metrics</a></p>
+    <p>Health: <a href="/health" target="_blank">/health</a></p>
+</body>
+</html>
