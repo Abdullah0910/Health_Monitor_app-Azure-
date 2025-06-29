@@ -1,17 +1,17 @@
-                                                              Health Monitor App
+                                                      Health Monitor App
 A lightweight Flask-based health dashboard simulating services in a POS system, with Prometheus integration and cloud deployment support
 
-                                                                  Features
+                                                         Features
 --Service health simulation (POS_API, PaymentGateway, InventoryService)
 --Prometheus metrics on /metrics
 --Health check on /health
 --Dockerized for easy deployment
 
-                                                              Run with Docker
+                                                      Run with Docker
 docker build -t health-monitor . ##these commands in bash
 docker run -p 5000:5000 health-monitor
 
-                                                   Now Finally Deploy to Azure App Service
+                                            Now Finally Deploy to Azure App Service
 
 
 1. az login
@@ -27,17 +27,17 @@ docker run -p 5000:5000 health-monitor
 
 
                                                           Prometheus Configuration
-Prometheus can scrape the metrics at /metrics to monitor request counts
+Prometheus can scrape the metrics at "/metrics" to monitor request counts
    global:
   scrape_interval: 15s
 
 scrape_configs:
   - job_name: 'health-monitor-app'
     static_configs:
-      - targets: ['localhost:5000']  # Or your cloud URL/IP
+      - targets: ['localhost:5000']  -->> Or cloud URL/IP
    
     
       - <img width="959" alt="image" src="https://github.com/user-attachments/assets/9972ade9-837e-49f2-884b-2d1f439cd8ba" />
 
 
-----------------------------------------------Thanks-----------------------------------------
+--------------------------------------Thanks-----------------------------------------
