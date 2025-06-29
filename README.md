@@ -2,7 +2,7 @@
 A lightweight Flask-based health dashboard simulating services in a POS system, with Prometheus integration and cloud deployment support
 
                                                          Features
---Service health simulation (POS_API, PaymentGateway, InventoryService)
+--Service health simulation (POS_API, PaymentGateway)
 --Prometheus metrics on /metrics
 --Health check on /health
 --Dockerized for easy deployment
